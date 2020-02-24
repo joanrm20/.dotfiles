@@ -13,6 +13,16 @@ call minpac#add('dense-analysis/ale')
 
 call minpac#add('scrooloose/nerdtree')
 
+call minpac#add('HerringtonDarkholme/yats.vim')
+
+call minpac#add('maxmellon/vim-jsx-pretty')
+
+call minpac#add('styled-components/vim-styled-components', { 'branch': 'main' })
+
+call minpac#add('mhartington/oceanic-next')
+
+call minpac#add('jiangmiao/auto-pairs')
+
 
 """"""""""""""""""""""""""""""
 " => bufExplorer plugin
@@ -22,7 +32,6 @@ let g:bufExplorerShowRelativePath=1
 let g:bufExplorerFindActive=1
 let g:bufExplorerSortBy='name'
 map <leader>o :BufExplorer<cr>
-
 
 
 """"""""""""""""""""""""""""""
@@ -111,29 +120,29 @@ vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 
 
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" " => lightline
-" """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" let g:lightline = {
-"       \ 'colorscheme': 'wombat',
-"       \ 'active': {
-"       \   'left': [ ['mode', 'paste'],
-"       \             ['fugitive', 'readonly', 'filename', 'modified'] ],
-"       \   'right': [ [ 'lineinfo' ], ['percent'] ]
-"       \ },
-"       \ 'component': {
-"       \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
-"       \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
-"       \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
-"       \ },
-"       \ 'component_visible_condition': {
-"       \   'readonly': '(&filetype!="help"&& &readonly)',
-"       \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
-"       \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
-"       \ },
-"       \ 'separator': { 'left': ' ', 'right': ' ' },
-"       \ 'subseparator': { 'left': ' ', 'right': ' ' }
-"       \ }
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => lightline
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ ['mode', 'paste'],
+      \             ['fugitive', 'readonly', 'filename', 'modified'] ],
+      \   'right': [ [ 'lineinfo' ], ['percent'] ]
+      \ },
+      \ 'component': {
+      \   'readonly': '%{&filetype=="help"?"":&readonly?"🔒":""}',
+      \   'modified': '%{&filetype=="help"?"":&modified?"+":&modifiable?"":"-"}',
+      \   'fugitive': '%{exists("*fugitive#head")?fugitive#head():""}'
+      \ },
+      \ 'component_visible_condition': {
+      \   'readonly': '(&filetype!="help"&& &readonly)',
+      \   'modified': '(&filetype!="help"&&(&modified||!&modifiable))',
+      \   'fugitive': '(exists("*fugitive#head") && ""!=fugitive#head())'
+      \ },
+      \ 'separator': { 'left': ' ', 'right': ' ' },
+      \ 'subseparator': { 'left': ' ', 'right': ' ' }
+      \ }
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Vimroom
@@ -149,7 +158,7 @@ nnoremap <silent> <leader>z :Goyo<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ale_linters = {
 \   'javascript': ['eslint', 'prettier', 'prettier-eslint'],
-\   'typescript': ['eslint', 'prettier'],
+\   'typescript': ['eslint', 'prettier', 'prettier-eslint'],
 \   'python': ['flake8'],
 \   'go': ['go', 'golint', 'errcheck']
 \}
