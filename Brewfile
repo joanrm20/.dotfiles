@@ -21,6 +21,10 @@ brew "jq"              # JSON processor
 # Apps
 cask "visual-studio-code"
 cask "iterm2"
+cask "arc"
+
+# Default browser setter (used in .osx)
+brew "defaultbrowser"
 
 # Oh My Zsh (installed separately, not via brew)
 # curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh

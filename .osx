@@ -199,6 +199,15 @@ defaults write com.apple.dock wvous-bl-corner -int 4
 defaults write com.apple.dock wvous-bl-modifier -int 0
 
 ###############################################################################
+# Default browser                                                             #
+###############################################################################
+
+# Set Arc as default browser (will prompt a one-time system confirmation dialog)
+if command -v defaultbrowser &>/dev/null; then
+  defaultbrowser arc
+fi
+
+###############################################################################
 # Safari                                                                      #
 ###############################################################################
 
