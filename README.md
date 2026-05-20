@@ -26,13 +26,6 @@ export WORK_DB_URL="..."
 alias work-vpn="sudo openconnect ..."
 ```
 
-## Manual steps (can't be automated)
-
-- **FileVault**: System Settings → Privacy & Security → FileVault → Turn On
-- **1Password**: Install from App Store, sign in
-- **iCloud**: System Settings → Apple ID → iCloud
-- **iTerm2 profile**: Open iTerm2 → Preferences → General → Preferences → Save current settings to folder
-
 ## Structure
 
 ```
