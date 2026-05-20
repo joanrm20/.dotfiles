@@ -31,11 +31,7 @@ alias work-vpn="sudo openconnect ..."
 - **FileVault**: System Settings → Privacy & Security → FileVault → Turn On
 - **1Password**: Install from App Store, sign in
 - **iCloud**: System Settings → Apple ID → iCloud
-- **asdf plugins**: `asdf plugin add nodejs && asdf plugin add pnpm`
-- **Oh My Zsh**: `curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh`
-- **Spaceship theme**: `git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1 && ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"`
-- **iTerm2 profile**: After running `install.sh`, open iTerm2 → Preferences → General → Preferences → Save current settings to folder
-- **Git worktrees**: `wt <branch>`, `wt-rm <branch>`, `wt-ls`
+- **iTerm2 profile**: Open iTerm2 → Preferences → General → Preferences → Save current settings to folder
 
 ## Structure
 

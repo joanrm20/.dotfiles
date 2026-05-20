@@ -16,6 +16,25 @@ fi
 echo "==> Installing Homebrew packages..."
 brew bundle --file="$DOTFILES_DIR/Brewfile"
 
+# Oh My Zsh
+if [[ ! -d "$HOME/.oh-my-zsh" ]]; then
+  echo "==> Installing Oh My Zsh..."
+  RUNZSH=no CHSH=no sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
+
+# Spaceship theme
+SPACESHIP_DIR="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship-prompt"
+if [[ ! -d "$SPACESHIP_DIR" ]]; then
+  echo "==> Installing Spaceship theme..."
+  git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$SPACESHIP_DIR" --depth=1
+  ln -sf "$SPACESHIP_DIR/spaceship.zsh-theme" "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/spaceship.zsh-theme"
+fi
+
+# asdf plugins
+echo "==> Installing asdf plugins..."
+asdf plugin add nodejs || true
+asdf plugin add pnpm || true
+
 # Symlinks
 echo "==> Linking dotfiles..."
 ln -sf "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc" && echo "  ✓ ~/.zshrc"
