@@ -47,9 +47,6 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # Disable auto-capitalize
 defaults write NSGlobalDomain NSAutomaticCapitalizationEnabled -bool false
 
-# Disable "Are you sure you want to open this application?" dialog
-defaults write com.apple.LaunchServices LSQuarantine -bool false
-
 # Speed up window resize animations
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 

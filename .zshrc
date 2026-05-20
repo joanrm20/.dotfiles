@@ -4,6 +4,9 @@
 # @author Jose Ramirez M.
 #
 
+# Don't save commands starting with a space to history (useful for secrets)
+setopt HIST_IGNORE_SPACE
+
 # Colors
 unset LSCOLORS
 export CLICOLOR=1
