@@ -1,3 +1,4 @@
 pack
 .DS_Store
 .zshrc.local
+.gitconfig.local

@@ -10,9 +10,9 @@ brew "asdf"
 brew "git"
 brew "git-delta"       # better git diffs
 
-# Node / package managers (managed via asdf)
-# asdf plugin add nodejs
-# asdf plugin add pnpm
+# Languages (PATH entries for these live in shell/rc.sh)
+brew "go"
+brew "openjdk"        # keg-only; rc.sh adds its bin to PATH
 
 # Dev tools
 brew "gh"              # GitHub CLI
@@ -25,10 +25,3 @@ cask "arc"
 
 # Default browser setter (used in .osx)
 brew "defaultbrowser"
-
-# Oh My Zsh (installed separately, not via brew)
-# curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
-
-# Spaceship theme (after oh-my-zsh)
-# git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
-# ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"

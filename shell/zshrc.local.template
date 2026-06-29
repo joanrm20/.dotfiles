@@ -1,0 +1,16 @@
+# ~/.zshrc.local — machine-specific config, not tracked in git
+# Created automatically by install.sh. Fill in what applies to this machine.
+
+# Secrets / API keys
+# export GITHUB_TOKEN=""
+# export ANTHROPIC_API_KEY=""
+
+# Work-specific
+# export WORK_DB_URL=""
+# alias work-vpn="sudo openconnect ..."
+
+# PATH overrides (runs after shell/rc.sh, so these win)
+# export PATH="$HOME/.local/bin:$PATH"
+
+# GUI editor used by the wt worktree helper (defaults to VS Code's `code` if present)
+# export EDITOR_GUI="cursor"
